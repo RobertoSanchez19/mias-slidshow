@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<header></header>
+<body>
+
+  <h1 id="mia1">My Dance Team</h1>
+
+	<div class="Mias">
+		<img src="dancing.jpeg">
+	</div>
+
+  <h1 id="mia2">My H&M PhotoShoot</h1>
+
+	<div class="Mias">
+		<img src="mia.jpg">
+	</div>
+
+  <h1 id="maria">Nike PhotoShoot</h1>
+	<div class="Mias">
+		<img src="nike.jpg">
+	</div>
+
+  <h1 id="destiny"> Night Out with The Family</h1>
+		
+	<div class="Mias">
+		<img src="polo.jpg">
+	</div>
+
+  <h1 id="choco">PhotoShoot with My Kitty</h1> 
+
+	<div class="Mias">
+		<img src="kitty.jpg">
+	</div>
+<a class="back-button" onclick="plusDivs(-1)">&#10094;</a>
+<a class="forward-button" onclick="plusDivs(+1)">&#10095;</a>
+</body>
+<script type="text/javascript">
+
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n){
+		showDivs(slideIndex += n);
+	}
+	function showDivs(n){
+		var i;
+		var x = document.getElementsByClassName("Mias");
+		if (n > x.length) {slideIndex = 1}
+		if (n < 1) {slideIndex= x.length}
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display= "none";
+		}
+		x[slideIndex-1].style.display= "block";
+	}
+</script>
+<style type="text/css">
+	.forward-button{
+		position: relative; top:-700px; left:500px;font-size:100px; }
+	.back-button{position: relative; top:-700px;right: 500px;
+		font-size:100px;
+	}
+    #mia1{
+    	color:#E9967A; 
+    }
+    #mia2{
+    	color:#800000;
+    }
+    #maria{
+    	color:#FF00FF;
+    }
+    #choco{
+    	color: #800080;
+    }
+    #destiny{
+    	color: #d591a5;
+    }
+    body {background-color:#13ECEE;
+    		border-color: grey;
+    		border-radius: 100px;}
+    html {text-align: center;
+    }
+    
+    
+</style>
+</html>
